@@ -28,7 +28,8 @@ void removeWindowBarAndTitle(int transparentType) {
 	[window setOpaque:NO];
 	[window setBackgroundColor: [NSColor clearColor]];
 	[window setHasShadow:NO];
-	
+	[window setIgnoresMouseEvents:YES]; // disabling the mouse so you can keep working on window in different levels
+    
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	[window setStyleMask:NSBorderlessWindowMask];
 	[pool release];
